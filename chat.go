@@ -259,6 +259,10 @@ type ChatCompletionRequestExtensions struct {
 	GuidedChoice []string `json:"guided_choice,omitempty"`
 }
 
+type Thinking struct{
+	Type string `josn:"type,omitempty"`
+}
+
 // ChatCompletionRequest represents a request structure for chat completion API.
 type ChatCompletionRequest struct {
 	Model    string                  `json:"model"`
@@ -275,6 +279,8 @@ type ChatCompletionRequest struct {
 	TopP                float32                       `json:"top_p,omitempty"`
 	N                   int                           `json:"n,omitempty"`
 	Stream              bool                          `json:"stream,omitempty"`
+	ReasoningSplit      bool                          `json:"reasoning_split,omitempty"`
+	Thinking            *Thinking                     `json:"thinking,omitempty"`
 	Stop                []string                      `json:"stop,omitempty"`
 	PresencePenalty     float32                       `json:"presence_penalty,omitempty"`
 	ResponseFormat      *ChatCompletionResponseFormat `json:"response_format,omitempty"`
