@@ -265,7 +265,7 @@ type ChatCompletionRequestExtensions struct {
 }
 
 type Thinking struct {
-	Type string `josn:"type,omitempty"`
+	Type string `json:"type,omitempty"`
 }
 
 // ChatCompletionRequest represents a request structure for chat completion API.
